@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" href="./assets/agregar-usuario.png">
+    <!-- Informacion que no va a salir en la pagina  -->
+    <!-- Importación de Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1>
+            Mi portafolio
+        </h1>
+    </header>
+
+    <section class="primeraparte">
+
+        <div class="banner">
+            <a href="#header">Informacion</a>
+            <a href="#2">Habilidades</a>
+            <a href="#3">Contacto</a>
+        </div>
+
+        <!-- contenedor padre -->
+        <div class="contenedor1">
+            <div class="imagen">
+                <img src="./assets/499925979_9802196596528903_3285289751256524914_n.jpg" alt="Foto de perfil">
+            </div>
+            
+            <div  class="informacion">
+                <h2>Sergio Lamos Lozano</h2>
+                <p>Soy desarrollador de software junior con conocimientos en HTML, CSS, JavaScript, SQL y Python. Me apasiona la tecnología y la investigación orientada a crear soluciones innovadoras. Mi objetivo es seguir creciendo profesionalmente y aportar al éxito de proyectos dentro del sector tecnológico.</p>
+                <b></b>
+                <p>Actualmente curso el sexto semestre de Tecnología en Desarrollo de Software en la Universidad del Valle, donde me he destacado en eventos de investigación como RREDSI, presentando trabajos sobresalientes. Además, hago parte del semillero de investigación IDICA, lo que me ha permitido fortalecer mis habilidades en investigación aplicada y desarrollo de proyectos.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="2">
+        
+        <!-- Contenedor principal para todas las habilidades -->
+        <div class="contenedordehabilidades">
+            <h2>Mis habilidades</h2>
+            <!-- Grupo para la habilidad de Python -->
+            <div class="habilidad">
+                <h3>Python</h3>
+                <div class="contenedorprogreso"><div class="barradeprogreso" style="width: 60%;"></div></div>
+            </div>
+            <!-- Grupo para la habilidad de SQL -->
+            <div class="habilidad">
+                <h3>SQL</h3>
+                <div class="contenedorprogreso"><div class="barradeprogreso" style="width: 80%;"></div></div>
+            </div>
+            <!-- Grupo para la habilidad de HTML -->
+            <div class="habilidad">
+                <h3>HTML</h3>
+                <div class="contenedorprogreso"><div class="barradeprogreso" style="width: 80%;"></div></div>
+            </div>
+            <!-- Grupo para la habilidad de CSS -->
+            <div class="habilidad">
+                <h3>CSS</h3>
+                <div class="contenedorprogreso"><div class="barradeprogreso" style="width: 70%;"></div></div>
+            </div>
+            <!-- Grupo para la habilidad de JavaScript -->
+            <div class="habilidad">
+                <h3>JavaScript</h3>
+                <div class="contenedorprogreso"><div class="barradeprogreso" style="width: 0%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="3">
+        <h2>Contacto</h2>
+        <form action="">
+            <label for="name">Nombre</label>
+            <input id = "name"  type="text" placeholder="Nombre completo">
+            <br>
+            <label for="email">Correo</label>
+            <input id = "email" type="text" placeholder="Correo electronico">
+            <br>
+            <label for="message">Mensaje</label>
+            <textarea id="message" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+
+        </form>
+    </section>
+    
+    
+
+<footer>
+    <p>
+        pagina fue desarrollada por Sergio Lamos Lozano
+    </p>
+    <a href="https://www.facebook.com/sergio.lamoslozano" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/sergiolamoslozano99/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/573022076776?text=Hola%20quiero%20más%20información" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>
