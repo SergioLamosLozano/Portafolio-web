@@ -155,6 +155,130 @@ p{
     background-color: #4CAF50; /* Color de la barra de progreso */
 }
 
+
+/* Estilos para el body */
+body{
+    margin: 0; /* Elimina los márgenes por defecto del navegador */
+}
+
+/* --- Estilos para el Contenedor General --- */
+.container {
+    max-width: 1100px; /* Ancho máximo del contenido */
+    margin: 0 auto;    /* Centra el contenedor */
+    padding: 0 15px;   /* Añade un poco de espacio a los lados */
+}
+
+
+/* --- Estilos DEFINITIVOS para el Carrusel con JavaScript --- */
+#logros {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+    text-align: center; /* Centra el h2 */
+}
+
+#logros .carousel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    /* 🔑 Forzar altura según relación de aspecto */
+    aspect-ratio: 16 / 9; /* o 800/400 como tus imágenes de placeholder */
+}
+
+#logros .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* LA REGLA CLAVE */
+#logros .carousel-slide {
+    flex: 0 0 100%; /* No crecer, no encogerse, ocupar 100% del ancho */
+    min-width: 100%; /* Soporte para navegadores más antiguos */
+    position: relative;
+    background-color: none; /* Fondo oscuro para el espacio vacío */
+}
+
+#logros .carousel-slide img {
+    width: 99.9%;
+    height: 99.9%;      /*  ocupa todo el alto disponible */
+    object-fit:cover; /*  Muestra la imagen completa sin recortar */
+    display: block;
+}
+
+#logros .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#logros .carousel-caption h5 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#logros .carousel-caption p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#logros .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+#logros .carousel-button:hover { background-color: white; }
+#logros .carousel-button.prev { left: 10px; }
+#logros .carousel-button.next { right: 10px; }
+
+#logros .carousel-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+#logros .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0;
+}
+
+#logros .carousel-dot.active {
+    background-color: white;
+}
+
 /* --- Estilos para el Footer --- */
 footer {
     text-align: center; /* Centra el contenido del footer */
@@ -176,9 +300,4 @@ footer a {
 
 footer a:hover {
     color: #007bff; /* Cambia a un color azul en el hover */
-}
-
-/* Estilos para el body */
-body{
-    margin: 0; /* Elimina los márgenes por defecto del navegador */
 }
